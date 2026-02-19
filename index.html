@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer ></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+
+<dialog id="startGame">
+            <button class="game">Start Game</button>
+</dialog>
+<dialog id ="nameInput">
+            <label for ="playerOne">Player 1 Name</label>
+            <input type="text" id="playerOne" name="playerOne" maxlength="8">
+            <label for ="playerTwo">Player 1 Name</label>
+            <input type="text" id="playerTwo" name="playerTwo" maxlength="8">
+            <button class="startGame">Start Game</button>
+</dialog>
+    <section>
+        
+        <div class = "top">
+            <div class ="player oneP">PLAYER 1 - <span class="symbolOne"> X</span></div>
+            <div class = "player twoP">PLAYER 2 - <span class="symbolTwo"> O</span></div>
+            <div class = "score"><span class="p1Score">0</span> : <span class="p2Score">0</span></div>
+            <div class = "turn">Player 1 Turn</div>
+        </div>
+        <div class = "bottom">
+            <div class="board">
+                <div class ="box one" value="1"></div>
+                <div class ="box two" value="2"></div>
+                <div class ="box three" value="3"></div>
+                <div class ="box four" value="4"></div>
+                <div class ="box five" value="5"></div>
+                <div class ="box six" value="6"></div>
+                <div class ="box seven" value="7"></div>
+                <div class ="box eight" value="8"></div>
+                <div class ="box nine" value="9"></div>
+            </div>
+            <div class="buttonContainer">
+                 <button class="reset Board">Reset Board</button>
+                 <button class="reset Score">Reset Score</button>   
+
+            </div>    
+        </div>
+    </section>
+    
+</body>
+</html>
