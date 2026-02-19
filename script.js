@@ -12,7 +12,7 @@ let p1Turn = true;
 let p1Score = 0;
 let p2Score = 0;
 
-console.log(p1Turn);
+console.log(box);
 
 
 document.addEventListener("DOMContentLoaded", () =>
@@ -39,7 +39,7 @@ btn_startGame.addEventListener("click", () =>
 
 for (const b of box)
     { b.addEventListener("click", (b) => {
-        console.log(p1Turn);
+        
         const num = b.target.getAttribute("value").value;
 
     if (p1Turn == true)
@@ -64,6 +64,7 @@ function resetBoard() {
     box.forEach(box => {
         box.textContent = ""
         box.style.pointerEvents = "auto";
+        turn.textContent="Player 1 Turn"
     })
 
 }; 
@@ -97,11 +98,11 @@ function checkWinner() {
         let pos2 = box[pattern[1]].innerText;
         let pos3 = box[pattern[2]].innerText;
         console.log(pos3);
-
-
-        if ((pos1 == pos2) && (pos1==pos3) &&(pos1 !== ""))
-        {let gameOver = true;
         
+        const tie = [...box].every(b => b.textContent !=="");
+        console.log(tie);
+        if ((pos1 == pos2) && (pos1==pos3) &&(pos1 !== ""))
+        {        
         if (pos1 == ("X")) {
             turn.textContent = "Player One Wins";
             p1Score ++;
@@ -110,11 +111,12 @@ function checkWinner() {
             turn.textContent = "Player Two Wins";
             p2Score ++;
             p2ScoreT.textContent = p2Score;    
-           }
-    }
+           }}
+        else if ((pos1 !== pos2) && (tie))
+            {turn.textContent = "Tie";
+                console.log(box);
+            }   
     }}
-
-
 
 
 
