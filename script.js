@@ -30,6 +30,7 @@ btn_startGame.addEventListener("click", () =>
     const p2Name = document.getElementById("playerTwo").value;
     const p1Area = document.querySelector(".player.oneP");
     const p2Area = document.querySelector(".player.twoP");
+    gameController();
     if (p1Name)
     {p1Area.textContent = `${p1Name} - P1 : X`;};
     if (p2Name)
@@ -37,6 +38,7 @@ btn_startGame.addEventListener("click", () =>
     }
 );
 
+function gameController(){
 for (const b of box)
     { b.addEventListener("click", (b) => {
         
@@ -56,7 +58,7 @@ for (const b of box)
         b.target.style.pointerEvents = "none";}    
 
 })};
-
+};
 
 
 
